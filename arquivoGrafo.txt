@@ -1,0 +1,130 @@
+51
+EST estacionamento
+PC0 coleta
+PC1 coleta
+PC2 coleta
+PC3 coleta
+PC4 coleta 
+PC5 coleta
+PC6 coleta
+PC7 coleta
+PC8 coleta
+PC9 coleta
+B0 banco
+B1 banco
+B2 banco
+B3 banco
+B4 banco
+B5 banco
+B6 banco
+B7 banco
+B8 banco 
+B9 banco
+Q cruzamento
+W cruzamento
+E cruzamento
+R cruzamento
+T cruzamento
+Y cruzamento
+U cruzamento
+I cruzamento
+O cruzamento
+P cruzamento
+A cruzamento
+S cruzamento
+D cruzamento
+F cruzamento
+G cruzamento
+H cruzamento
+J cruzamento
+K cruzamento
+L cruzamento
+ZN cruzamento
+Z cruzamento
+X cruzamento
+C cruzamento
+V cruzamento
+B cruzamento
+N cruzamento
+M cruzamento
+AB cruzamento
+AC cruzamento
+AD cruzamento
+EST
+PC4 6 Z 12 B2 2 S 8
+PC0
+AB 4 PC1 8 Y 1
+PC1
+B 4
+PC2
+M 3 A 9 N 4 ZN 5
+PC3
+N 2 S 6
+PC4
+W 1 AD 3
+PC5
+AD 4 F 5 H 2
+PC6
+J 4 U 3 G 6 W 5
+PC7
+T 11 R 1 B6 8
+PC8
+L 4 Q 5 P 1 O 4 C 3
+PC9
+AC 2 U 3
+B0
+H 3 E 1 D 3
+B1
+X 5 I 5
+B2
+V 2 W 3
+B3
+R 4 V 8 AC 5
+B4
+A 6 B 5
+B5
+C 1 K 5
+B6
+ZN 3 S 5
+B7
+AD 6 AB 3
+B8
+F 8 D 3 E 2 H 7 
+B9
+G 2 W 4
+Q
+R 5 P 7 AC 4
+W
+U 2
+R
+T 7
+T
+V 9
+Y
+K 10 AB 11 D 8 X 3
+U
+X 2 J 4
+I
+H 2 J 3
+O
+P 10
+P
+ZN 2
+A
+B 3
+S
+Z 4
+D
+AB 2
+G
+AD 3
+J
+X 7
+K
+L 12
+L
+AC 8
+C
+M 2 B 1
+B
+M 5
