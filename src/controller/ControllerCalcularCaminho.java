@@ -33,7 +33,7 @@ public class ControllerCalcularCaminho {
     }
     public ArrayList addPontosComboBox(String tipo) {
         Grafo grafo = Grafo.getInstance();
-        ArrayList listaDeBancos = grafo.ListarPontos(tipo);
+        ArrayList listaDeBancos = grafo.listarTipodePontos(tipo);
         return listaDeBancos;
     } 
       public String calcularRota(String coleta, String banco){

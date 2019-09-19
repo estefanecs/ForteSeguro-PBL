@@ -1,7 +1,7 @@
 /**
  * Componente Curricular: Módulo Integrado de Programação
  * Autor: Estéfane Carmo de Souza
- * Data: 04-09-2019
+ * Data: 24-08-2019
  *
  * Declaro que este código foi elaborado por mim de forma individual e
  * não contém nenhum trecho de código de outro colega ou de outro autor,
@@ -12,39 +12,43 @@
  * de avaliação. Alguns trechos do código podem coincidir com de outros
  * colegas pois estes foram discutidos em sessões tutorias.
  */
-package controller;
-
-import java.util.ArrayList;
-import model.Grafo;
+package model;
 
 /**
- * Esta classe é um controlador da interface ImportarArquivo
+ * Esta classe armazena os dados de uma aresta, o segundo vertice que está
+ * ligada e o peso que possui.
  *
  * Exemplo de uso:
  *
- * ControllerArquivo controller= new ControllerArquivo();
+ * Aresta aresta= new Aresta(vertice,15);
  *
  * @author Estéfane Carmo de Souza
  */
-public class ControllerRemover {
+public class Aresta {
 
-    public ControllerRemover() {
+    private Vertice destino;
+    private int peso;
+
+    public Aresta(Vertice destino, int peso) {
+        this.destino = destino;
+        this.peso = peso;
     }
 
-    public String removerPonto(String nome) {
-        Grafo grafo = Grafo.getInstance();
-        grafo.removerVertice(nome);
-        return grafo.recalcularRota(nome);
+    /**
+     * Método que obtém um dos vértices
+     *
+     * @return Vertice
+     */
+    public Vertice getDestino() {
+        return destino;
     }
 
-    public String removerLigacao(String vertice1, String vertice2) {
-        Grafo grafo = Grafo.getInstance();
-        return grafo.removerAresta(vertice1, vertice2);
-    }
-
-    public ArrayList addPontosComboBox() {
-        Grafo grafo = Grafo.getInstance();
-        ArrayList listaDeBancos = grafo.listarTodosPontos();
-        return listaDeBancos;
+    /**
+     * Método que obtém o peso da aresta
+     *
+     * @return int - peso
+     */
+    public int getPeso() {
+        return peso;
     }
 }

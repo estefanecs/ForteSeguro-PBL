@@ -133,10 +133,12 @@ public class GrafoTeste {
         grafo.addAresta("F", "E", 3);
 
         assertEquals(8, grafo.getVertices().size());
+
         //Removendo o vertice "H"
         assertEquals("A", grafo.getVertices().procurarNo("H").getAdjacencias().get(0).getConteudo().getDestino().getNome());
         assertEquals("B", grafo.getVertices().procurarNo("H").getAdjacencias().get(1).getConteudo().getDestino().getNome());
         assertEquals("D", grafo.getVertices().procurarNo("H").getAdjacencias().get(2).getConteudo().getDestino().getNome());
+
         grafo.removerVertice("H");
 
         assertEquals(7, grafo.getVertices().size());
@@ -179,7 +181,6 @@ public class GrafoTeste {
         //Remove todos os vertices
         grafo.removerTodosVertice();
         assertTrue(grafo.getVertices().isEmpty());
-
     }
 
     @Test
@@ -267,7 +268,6 @@ public class GrafoTeste {
 
         grafo.removerTodosVertice();
         assertTrue(grafo.getVertices().isEmpty());
-
     }
 
     @Test
@@ -311,15 +311,14 @@ public class GrafoTeste {
 
         assertEquals("H", grafo.getVertices().get(7).getConteudo().getNome());
         assertEquals("estacionamento", grafo.getVertices().get(7).getConteudo().getTipo());
-        
+
         //ALterar banco da rota
         //Remove todos os vertices
         grafo.removerTodosVertice();
         assertTrue(grafo.getVertices().isEmpty());
 
     }
-//TESTAR ISSO E VER SE AO TROCAR O ESTACIONAMENTO E BANCO, É ATUALIZADO O CAMINHO
-
+    
     @Test
     public void CalcularCaminho() {
         assertTrue(grafo.getVertices().isEmpty());
@@ -344,20 +343,20 @@ public class GrafoTeste {
         grafo.addAresta("D", "E", 12);
 
         assertEquals(7, grafo.getVertices().size());
-/*
-        assertEquals("I - C - E - C\nO tempo do trajeto é de 13", grafo.calcularRota("E", "C"));
-        assertEquals("I - C - N - C - D - A\nO tempo do trajeto é de 27", grafo.calcularRota("N", "A"));
+
+        assertEquals("I,C,E,C\nO tempo do trajeto é de 13 minutos", grafo.calcularRota("E", "C"));
+        assertEquals("I,C,N,C,D,A\nO tempo do trajeto é de 27 minutos", grafo.calcularRota("N", "A"));
 
         //Altera o estacionamento
-        assertEquals("I - C - N - C - D - A\nO tempo do trajeto é de 27", grafo.calcularRota("N", "A"));
+        assertEquals("I,C,N,C,D,A\nO tempo do trajeto é de 27 minutos", grafo.calcularRota("N", "A"));
         grafo.alterarEstacionamento("D");
-        assertEquals("D - C - N - C - D - A\nO tempo do trajeto é de 32", grafo.getRota());
+        assertEquals("D,C,N,C,D,A\nO tempo do trajeto é de 32 minutos", grafo.getRota());
 
         //Altera o banco
-        assertEquals("D - E - B - A\nO tempo do trajeto é de 25", grafo.calcularRota("E", "A"));
-        grafo.alterarBanco("D");
-        assertEquals("D - E - C\nO tempo do trajeto é de 17", grafo.getRota());
-*/
+        assertEquals("D,E,B,A\nO tempo do trajeto é de 25 minutos", grafo.calcularRota("E", "A"));
+        grafo.alterarBanco("C");
+        assertEquals("D,E,C\nO tempo do trajeto é de 17 minutos", grafo.getRota());
+
         //Remove todos os vertices
         grafo.removerTodosVertice();
         assertTrue(grafo.getVertices().isEmpty());

@@ -17,32 +17,30 @@ package controller;
 import java.util.ArrayList;
 import model.Grafo;
 
+
 /**
- * Esta classe é um controlador da interface ImportarArquivo
+ * Esta classe é um controlador da interface Adicionar
  *
  * Exemplo de uso:
  *
- * ControllerArquivo controller= new ControllerArquivo();
+ * ControllerAdicionar controller= new ControllerAdicionar();
  *
  * @author Estéfane Carmo de Souza
  */
-public class ControllerRemover {
+public class ControllerAdicionar {
 
-    public ControllerRemover() {
+    public ControllerAdicionar() {
+        
     }
-
-    public String removerPonto(String nome) {
-        Grafo grafo = Grafo.getInstance();
-        grafo.removerVertice(nome);
-        return grafo.recalcularRota(nome);
+    public void adicionarPonto(String nome, String tipo){
+         Grafo grafo= Grafo.getInstance();
+         grafo.addVertice(nome, tipo);
     }
-
-    public String removerLigacao(String vertice1, String vertice2) {
-        Grafo grafo = Grafo.getInstance();
-        return grafo.removerAresta(vertice1, vertice2);
+    public void adicionarLigacao(String vertice1, String vertice2, int pesoAresta){
+      Grafo grafo= Grafo.getInstance();
+       grafo.addAresta(vertice1, vertice2, pesoAresta);
     }
-
-    public ArrayList addPontosComboBox() {
+   public ArrayList addPontosComboBox() {
         Grafo grafo = Grafo.getInstance();
         ArrayList listaDeBancos = grafo.listarTodosPontos();
         return listaDeBancos;

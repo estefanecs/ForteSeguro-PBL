@@ -15,9 +15,7 @@
 package controller;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import model.Grafo;
-import util.Node;
 
 
 /**
@@ -44,12 +42,12 @@ public class ControllerAlterarPontos {
     }      
      public ArrayList addPontosComboBox() {
         Grafo grafo = Grafo.getInstance();
-        ArrayList listaDeBancos = grafo.ListarTodosPontos();
+        ArrayList listaDeBancos = grafo.listarTodosPontos();
         return listaDeBancos;
     }
     public ArrayList addBancosComboBox() {
         Grafo grafo = Grafo.getInstance();
-        ArrayList listaDeBancos = grafo.ListarPontos("banco");
+        ArrayList listaDeBancos = grafo.listarTipodePontos("banco");
         return listaDeBancos;
     }
 }
